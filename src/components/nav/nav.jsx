@@ -1,7 +1,7 @@
 export default function Nav(){
     return (
         <nav>
-            nav
+            <h2>nav</h2>
         </nav>
     )
 }
