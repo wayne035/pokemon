@@ -1,5 +1,5 @@
 import sty from './style.module.css'
-
+import Name from '../name'
 const type ={ // type[0] , 16進位[1] , rgb[2]
     grass:['草','#42a131','66,161,49'],
     poison:['毒','#9043c9','144,67,201'],
@@ -21,19 +21,18 @@ const type ={ // type[0] , 16進位[1] , rgb[2]
     steel:['鋼','#62a1b7','98,161,183'],
 }
 
-export default function Section(porps){
-    const {pokemon} = porps
+export default function Section({pokemon}){
     return (
         <section className={sty.section}>
         {   
-            pokemon.map( ({id, name, sprites, types}) =>{
+            pokemon.map( ({id, sprites, types}) =>{
                 return(
                     <div key={id} className={sty.card} 
                          style={{background:`rgba(${type[types[0].type.name][2]},.35)`}}
-                    >
+                    >   
                         <h2 className={sty.number}>NO.{String(id).padStart(4,'0')}</h2>
                         <img className={sty.img} src={sprites.front_default}/>
-                        <h2 className={sty.name}>{name}</h2>
+                        <h2 className={sty.name}><Name id={id}/></h2>
                         <p className={sty.type}>屬性 : {
                             (types.length === 2) ? 
                                 <span>

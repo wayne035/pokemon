@@ -12,9 +12,9 @@ export default function App() {
     const fetchPokemon = async () => {
       const pokemonArray = [];
       for (let i = 1; i <= 1008; i++) {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
-        const json = await response.json();
-        pokemonArray.push(json);
+        const type = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
+        const jsonData = await type.json();
+        pokemonArray.push(jsonData);
       }
       setPokemon(pokemonArray);
     };
