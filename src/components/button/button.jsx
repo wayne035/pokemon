@@ -1,10 +1,16 @@
 import React,{useState} from 'react'
 import Section from '../section/section'
+import sty from './style.module.css'
+
 export default function Button({btnCount,page}){
     const [pageChange, setPageChange] = useState(1);
     const btn =[]
     for (let i = 1 ; i <= btnCount ; i++) {
-        btn.push(<button key={i} onClick={() => PageChange(i)}>Page {i}</button>)
+        btn.push(
+            <button className={sty.btn}  key={i} 
+                    onClick={() => PageChange(i)}
+            >{i}</button>
+        )
     }
 
     const PageChange = (page) => {
@@ -18,9 +24,11 @@ export default function Button({btnCount,page}){
         return <Section pokemon={slicedPage} />;
     }
     return (
-        <div>
-            {btn}
+        <>
+            <div className={sty.btnwrap}>
+                {btn}
+            </div>
             {toggle()}
-        </div>
+        </>
     )
 }

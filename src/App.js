@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import './style.css';
 import Header from './components/header'
-import Section from './components/section/section'
 import Footer from './components/footer'
 import Seach from './components/seach'
 import Button from './components/button/button'
@@ -9,11 +8,8 @@ import Button from './components/button/button'
 export default function App() {
   const [pokemonSelect , setPokemonSelect] = useState([])
   const [page , setPage] = useState([])
-
   const [btnCount, setBtnCount] = useState(1);
-
 //===================================================
-
   useEffect(()=>{
     const fetchPokemon = async () => {
       const pokemonArray = [];
@@ -28,15 +24,7 @@ export default function App() {
     };
     fetchPokemon();
   },[])
-
 //====================================================
-
-
-
-
-
-
-
   return (
     <div>
       <Header/>
