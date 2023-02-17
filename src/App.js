@@ -23,7 +23,7 @@ export default function App() {
       }
       setPokemonSelect(pokemonArray);
       setPage(pokemonArray)
-      setBtnCount(Math.ceil(pokemonArray.length / 120))
+      setBtnCount(Math.ceil(pokemonArray.length / 60)) //一頁要多少隻?
     };
     fetchPokemon();
   },[])
@@ -35,7 +35,7 @@ export default function App() {
   };
 
   const toggle = ()=>{
-    let count = 120  //一頁要多少隻?
+    let count = 60  //一頁要多少隻?
     let start = (pageChange - 1) * count; //開始值
     let end = start + count; //結束值
     let slicedPage = page.slice(start, end);
