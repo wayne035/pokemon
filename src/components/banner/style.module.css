@@ -1,0 +1,36 @@
+.banner{
+    position:relative;
+    width: 100%;
+    background: #000;
+    text-align: center;
+    z-index: 0;
+}
+.banner video{
+    width: 70%;
+}
+.bannerImg{
+    position: absolute;
+    font-size: 84px;
+    left: 50%;
+    bottom: -3%;
+    transform: translate(-50%);
+    z-index: 20;
+    animation: move 2s infinite;
+}
+@keyframes move {
+    50%{
+        bottom:0%;
+    }
+    0%,100%{
+        bottom:-3%;
+    }
+}
+.cover{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0, .4);
+}
