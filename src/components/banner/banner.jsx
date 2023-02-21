@@ -7,7 +7,7 @@ export default function Banner(){
                 <source src="/video/banner.mp4" type="video/mp4"/>
             </video>
             <div className={sty.cover}/>
-            <img className={sty.bannerImg} src="/img/0.webp" alt="img"/>
+            <img className={sty.bannerImg} src="/img/avatar.webp" alt="img"/>
         </div>
     )
 }

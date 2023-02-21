@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap');
+.menu{
+    display: flex;
+    list-style-type: none;
+    height: 60px;
+    align-items: center;
+}
+.menu li{
+    height: 100%;
+}
+.menu li a{
+    display: block;
+    padding: 0px 10px;
+    height: 100%;
+    line-height: 60px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.menu li a:hover{
+    background: #fff;
+    color:rgb(233, 54, 54);
+    border-bottom: 3px solid rgb(252, 133, 222);
+}

@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import './style.css';
-import Header from './components/header'
+import Header from './components/header/header'
 import Banner from './components/banner/banner';
 import Footer from './components/footer'
 import Seach from './components/seach'
