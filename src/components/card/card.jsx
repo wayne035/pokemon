@@ -21,7 +21,7 @@ const type ={ // type[0] , 16進位[1] , rgb[2]
     steel:['鋼','#62a1b7','98,161,183'],
 }
 
-export default function Section({pokemon}){
+export default function Card({pokemon}){
     return (
         <section className={sty.section}>
         {   
