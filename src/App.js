@@ -1,10 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import './style.css';
 import Header from './components/header/header'
-import Banner from './components/banner/banner';
+import Banner from './components/banner/banner'
 import Footer from './components/footer/footer'
-import Seach from './components/seach'
-import Button from './components/button/button'
+import Search from './components/search/search'
+import PagesButton from './components/pagesbtn/pagesbtn'
 
 export default function App() {
   const [pokemonSelect , setPokemonSelect] = useState([])
@@ -30,8 +30,8 @@ export default function App() {
     <div>
       <Header/>
       <Banner/>
-      <Seach/>
-      <Button btnCount={btnCount} page={page}/>
+      <Search/>
+      <PagesButton btnCount={btnCount} page={page}/>
       <Footer/>
     </div>
   );

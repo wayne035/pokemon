@@ -1,0 +1,36 @@
+.searchwrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    position: relative;
+    z-index: 20;
+    background:rgb(255, 91, 26);
+    margin: 0px auto 20px;
+}
+.select {
+    height: 50px;
+    width: 300px;
+    color: #000;
+    font-size: 25px;
+    border: 1px solid #5e4dcd;
+    border-radius: 6px 0 0 6px;
+}
+.select:focus{
+    border-color: #3898EC;
+    outline: none;
+}
+.btn {
+    min-height: 50px;
+    border: 0;
+    padding: 0 10px;
+    border-radius: 0 6px 6px 0;
+    background: #5e4dcd;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color .3s ;
+}
+.btn:hover {
+    background-color: #5e5dcd;
+}

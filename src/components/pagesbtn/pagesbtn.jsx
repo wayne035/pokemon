@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import Card from '../card/card'
 import sty from './style.module.css'
 
-export default function Button({btnCount,page}){
+export default function PagesButton({btnCount,page}){
     const [pageChange, setPageChange] = useState(1);
     const btn =[]
     for (let i = 1 ; i <= btnCount ; i++) {
