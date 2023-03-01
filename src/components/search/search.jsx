@@ -11,7 +11,9 @@ export default function search(){
                    type='text'
                    placeholder="請輸入神奇寶貝名稱...."
             />
-            <button className={sty.btn} onClick={search}>查詢</button>
+            <button className={sty.btn} onClick={search}>
+                <img className={sty.img} src="/img/select.webp" alt="img"/>
+            </button>
         </div>
     )
 }
