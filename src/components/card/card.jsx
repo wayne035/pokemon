@@ -1,5 +1,5 @@
 import sty from './style.module.css'
-import Name from '../name'
+import Name from './name'
 const type ={ // type[0] , 16進位[1] , rgb[2]
     grass:['草','#42a131','66,161,49'],
     poison:['毒','#9043c9','144,67,201'],
