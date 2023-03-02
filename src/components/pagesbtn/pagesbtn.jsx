@@ -12,11 +12,10 @@ export default function PagesButton({btnCount,page}){
             >{i}</button>
         )
     }
-
     const PageChange = (page) => {
         setPageChange(page);
     };
-    const toggle = ()=>{
+    const display = ()=>{
         let count = 60  //一頁要多少隻?
         let start = (pageChange - 1) * count; //開始值
         let end = start + count; //結束值
@@ -28,7 +27,7 @@ export default function PagesButton({btnCount,page}){
             <div className={sty.btnwrap}>
                 {btn}
             </div>
-            {toggle()}
+            {display()}
         </>
     )
 }
