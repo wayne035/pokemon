@@ -1,26 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap');
-.menu{
-    display: flex;
+
+.menu {
+    display: block;
+    position: absolute;
     list-style-type: none;
-    height: 60px;
     align-items: center;
+    top:60px;
+    width: 100%;
+    z-index: 30;
+    background: rgb(233, 54, 54);
 }
-.menu li{
+.menu li {
     height: 100%;
 }
-.menu li a{
+.menu li a {
     display: block;
     padding: 0px 10px;
     height: 100%;
     line-height: 60px;
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Noto Sans SC', sans-serif;
+    text-align: center;
 }
-
-.menu li a:hover{
+.menu li a:hover {
     background: #fff;
     color:rgb(233, 54, 54);
-    border-bottom: 3px solid rgb(252, 133, 222);
+    outline: 3px solid rgb(168, 17, 17);
 }
+.hb {
+    width: 40px;
+    height: 40px;
+    background:transparent;
+    cursor: pointer;
+    position: relative;
+    margin:10px;
+}
+.top{
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    background: #fff;
+    top:8px;
+    cursor: pointer;
+}
+.mid{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    background: #fff;
+    top:20px;
+}
+.bot{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    background: #fff;
+    top:32px;
+}
+@media screen and (min-width:640px){
+    .menu {
+        display: flex;
+        height: 60px;
+        position: static;
+        width: auto;
+    }
+    .menu li a {
+        font-size: 22px;
+    }
+    .menu li a:hover {
+        border-bottom: 3px solid rgb(168, 17, 17);
+        outline: 0;
+    }
+    .hb{
+        display: none;
+    }
+}
+
+

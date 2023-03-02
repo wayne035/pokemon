@@ -32,7 +32,7 @@ export default function Card({pokemon}){
                          style={{background:`rgba(${type[types[0].type.name][2]},.35)`}}
                     >   
                         <h2 className={sty.number}>NO.{String(id).padStart(4,'0')}</h2>
-                        <img className={sty.img} src={sprites.front_default}/>
+                        <img className={sty.img} src={sprites.front_default} alt='pokemon'/>
                         <h2 className={sty.name}>
                             <Name id={id}/>
                         </h2>
