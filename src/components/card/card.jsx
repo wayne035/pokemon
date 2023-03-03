@@ -25,7 +25,7 @@ export default function Card({pokemon}){
     return (
         <section className={sty.section}>
         {   
-            pokemon.map( ({id, sprites, types}) =>{
+            pokemon.map( ({id, sprites, types ,name}) =>{
                 return(
                     <div key={id} 
                          className={sty.card} 
@@ -34,7 +34,7 @@ export default function Card({pokemon}){
                         <h2 className={sty.number}>NO.{String(id).padStart(4,'0')}</h2>
                         <img className={sty.img} src={sprites.front_default} alt='pokemon'/>
                         <h2 className={sty.name}>
-                            <Name id={id}/>
+                            <Name id={id}/>{name}
                         </h2>
                         <p className={sty.type}>屬性 : {
                             (types.length === 2) ? 
