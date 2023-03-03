@@ -8,29 +8,57 @@
 .banner video{
     width: 70%;
 }
-.bannerImg{
-    position: absolute;
-    font-size: 84px;
-    left: 50%;
-    bottom: -3%;
-    transform: translate(-50%);
-    z-index: 20;
-    animation: move 2s infinite;
-}
-@keyframes move {
-    50%{
-        bottom:0%;
-    }
-    0%,100%{
-        bottom:-3%;
-    }
-}
+
 .cover{
     position: absolute;
-    z-index: 10;
+    z-index: 1;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background: rgba(0,0,0, .4);
+}
+.bannerImgSD {display:none}
+.bannerImgDM {display:none}
+.bannerImgSS {display:none}
+
+@media  screen and (min-width:640px) {
+    .bannerImgSD {
+        display:block;
+        position: absolute;
+        font-size: 84px;
+        left: 50%;
+        transform:translate(-50% , 10%) scale(0.8) ;
+        z-index: 2;
+        animation: move 2s infinite;
+    }
+    @keyframes move {
+        50%{
+            bottom:0%;
+        }
+        0%,100%{
+            bottom:-3%;
+        }
+    }
+}
+@media screen and (min-width:1024px){
+    .bannerImgSD {transform:translate(-50%) scale(1) ;}
+    .bannerImgSS {
+        display:block;
+        position: absolute;
+        font-size: 84px;
+        left: 80%;
+        transform:translate(-50%);
+        z-index: 2;
+        animation: move 2s infinite;
+    }
+    .bannerImgDM {
+        display:block;
+        position: absolute;
+        font-size: 84px;
+        left: 18%;
+        transform:translate(-50%);
+        z-index: 2;
+        animation: move 2s infinite;
+    }
 }
