@@ -2,11 +2,11 @@ import React,{useState} from 'react'
 import sty from './style.module.css'
 
 export default function Nav(){
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 //=====================================================
     window.addEventListener('resize',()=>{
-        setWindowWidth(window.innerWidth)
+        setWindowWidth(window.innerWidth);
     })
 
     const display ={

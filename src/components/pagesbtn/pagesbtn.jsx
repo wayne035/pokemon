@@ -4,7 +4,7 @@ import sty from './style.module.css'
 
 export default function PagesButton({btnCount,page}){
     const [pageChange, setPageChange] = useState(1);
-    const btn =[]
+    const btn =[];
     for (let i = 1 ; i <= btnCount ; i++) {
         btn.push(
             <button className={sty.btn}  key={i} 
