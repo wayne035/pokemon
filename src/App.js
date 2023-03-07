@@ -19,7 +19,7 @@ export default function App() {
           pokemonArray.push(jsonData);
         }
         setPage(pokemonArray)
-        setBtnCount(Math.ceil(pokemonArray.length / 10)); //一頁要多少隻?
+        setBtnCount(Math.ceil(pokemonArray.length / 12)); //一頁要多少隻?
       }catch(err){
         console.log(err.message);
       }

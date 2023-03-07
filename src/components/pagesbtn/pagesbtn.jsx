@@ -16,7 +16,7 @@ export default function PagesButton({btnCount,page}){
         setPageChange(page);
     };
     const display = ()=>{
-        let count = 10  //一頁要多少隻?
+        let count = 12  //一頁要多少隻?
         let start = (pageChange - 1) * count; //開始值
         let end = start + count; //結束值
         let slicedPage = page.slice(start, end);
