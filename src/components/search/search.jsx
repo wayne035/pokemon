@@ -16,10 +16,13 @@ export default function Search({page,btnCount}){
             let keyword = page.filter(v=> v.name.includes(text.toLowerCase()));
             if(keyword == false){
                 alert('找不到該神奇寶貝');
+                setToggle(true);
+                setText('');
+            }else{
+                setFilter(keyword);
+                setToggle(false);
+                setText('');
             }
-            setFilter(keyword);
-            setToggle(false);
-            setText('');
         }
     }
 //=========================================================
