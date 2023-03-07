@@ -14,6 +14,9 @@ export default function Search({page,btnCount}){
             setToggle(true);
         }else{
             let keyword = page.filter(v=> v.name.includes(text.toLowerCase()));
+            if(keyword == false){
+                alert('找不到該神奇寶貝');
+            }
             setFilter(keyword);
             setToggle(false);
             setText('');
@@ -30,7 +33,7 @@ export default function Search({page,btnCount}){
                     onChange={(e)=>{setText(e.target.value.trim())}}
                 />
                 <button className={sty.btn} onClick={search}>
-                    <img className={sty.img} src="/img/select.webp" alt="img"/>
+                    <img className={sty.img} src="./img/select.webp" alt="img"/>
                 </button>
             </div>
             {

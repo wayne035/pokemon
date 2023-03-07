@@ -40,11 +40,11 @@ export default function Nav(){
             </div>
 
             <ul className={sty.menu} style ={ windowWidth > 640 ? flex : display }>
-                <li><a href="/">商品</a></li>
-                <li><a href="/">電影</a></li>
-                <li><a href="/">遊戲</a></li>
-                <li><a href="/">活動</a></li>
-                <li><a href="/">關於我們</a></li>
+                <li><a href="https://wayne035.github.io/pokemon/">商品</a></li>
+                <li><a href="https://wayne035.github.io/pokemon/">電影</a></li>
+                <li><a href="https://wayne035.github.io/pokemon/">遊戲</a></li>
+                <li><a href="https://wayne035.github.io/pokemon/">活動</a></li>
+                <li><a href="https://wayne035.github.io/pokemon/">關於我們</a></li>
             </ul>
         </>
     )

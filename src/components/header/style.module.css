@@ -4,8 +4,11 @@
     background: rgb(233, 54, 54);
     align-items: center;
 }
-.img{
+.a{
+    display: block;
     height: 60px;
+}
+.img{
     width: 150px;
     padding: 10px 20px;
 }

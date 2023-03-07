@@ -1,5 +1,5 @@
 import sty from './style.module.css'
-import Name from './name'
+
 const type ={ // type[0] , 16進位[1] , rgb[2]
     grass:['草','#42a131','66,161,49'],
     poison:['毒','#9043c9','144,67,201'],
@@ -24,7 +24,8 @@ const type ={ // type[0] , 16進位[1] , rgb[2]
 export default function Card({pokemon}){
     return (
         <section className={sty.section}>
-        {   
+          <div className={sty.cardwrap}>
+          {   
             pokemon.map( ({id, sprites, types ,name}) =>{
                 return(
                     <div key={id} 
@@ -34,7 +35,7 @@ export default function Card({pokemon}){
                         <h2 className={sty.number}>NO.{String(id).padStart(4,'0')}</h2>
                         <img className={sty.img} src={sprites.front_default} alt='pokemon'/>
                         <h2 className={sty.name}>
-                            <Name id={id}/>{name}
+                            {name}
                         </h2>
                         <p className={sty.type}>屬性 : {
                             (types.length === 2) ? 
@@ -53,7 +54,8 @@ export default function Card({pokemon}){
                     </div>
                 )
             })
-        }
+          }
+          </div>
         </section>
     )
 }

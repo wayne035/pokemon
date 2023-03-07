@@ -13,13 +13,13 @@ export default function App() {
     const fetchPokemon = async () => {
       try{
         const pokemonArray = [];
-        for (let i = 1; i <= 151; i++) {
+        for (let i = 1; i <= 60; i++) {
           const type = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
           const jsonData = await type.json();
           pokemonArray.push(jsonData);
         }
         setPage(pokemonArray)
-        setBtnCount(Math.ceil(pokemonArray.length / 60)); //一頁要多少隻?
+        setBtnCount(Math.ceil(pokemonArray.length / 10)); //一頁要多少隻?
       }catch(err){
         console.log(err.message);
       }
