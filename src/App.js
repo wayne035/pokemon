@@ -6,20 +6,16 @@ import Footer from './components/footer/footer'
 import Search from './components/search/search'
 
 export default function App() {
-  const [page , setPage] = useState([]);
+  const [pokemon , setPokemon] = useState([]);
   const [btnCount, setBtnCount] = useState(1);
 //===================================================
   useEffect(()=>{
     const fetchPokemon = async () => {
       try{
-        const pokemonArray = [];
-        for (let i = 1; i <= 60; i++) {
-          const type = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
-          const jsonData = await type.json();
-          pokemonArray.push(jsonData);
-        }
-        setPage(pokemonArray)
-        setBtnCount(Math.ceil(pokemonArray.length / 12)); //一頁要多少隻?
+        const type = await fetch(`./pokemonapi.json`);
+        const jsonData = await type.json();
+        setPokemon(jsonData)
+        setBtnCount(Math.ceil(jsonData.length / 12)); //一頁要多少隻?
       }catch(err){
         console.log(err.message);
       }
@@ -31,7 +27,7 @@ export default function App() {
     <div>
       <Header/>
       <Banner/>
-      <Search page={page} btnCount={btnCount}/>
+      <Search pokemon={pokemon} btnCount={btnCount}/>
       <Footer/>
     </div>
   );

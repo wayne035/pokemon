@@ -5,10 +5,22 @@
     align-items: center;
 }
 .a{
-    display: block;
+    display: flex;
     height: 60px;
+    text-decoration: none;
+    color:#fff;
+    font-size: 14px;
+    text-shadow: 1px 1px 4px rgb(0,0,0);
+}
+h1{
+    display: none;
+    line-height: 65px;
 }
 .img{
     width: 150px;
     padding: 10px 20px;
+}
+
+@media screen and (min-width: 768px) {
+    h1{display:block;}
 }

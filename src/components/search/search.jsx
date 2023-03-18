@@ -3,17 +3,20 @@ import sty from './style.module.css'
 import Card from '../card/card'
 import PagesButton from '../pagesbtn/pagesbtn'
 
-export default function Search({page,btnCount}){
+export default function Search({pokemon,btnCount}){
     const [text,setText] = useState('');
     const [filter,setFilter] = useState([]);
     const [toggle,setToggle] = useState(true);
 //=========================================================
     let search = ()=>{
         if(text === ''){
-            alert('請輸入英文名稱');
+            alert('請輸入神奇寶貝名稱');
             setToggle(true);
+            
         }else{
-            let keyword = page.filter(v=> v.name.includes(text.toLowerCase()));
+            let keyword = pokemon.filter(v=> {
+                return v.name.includes(text) || String(v.id) === text
+            });
             if(keyword == false){
                 alert('找不到該神奇寶貝');
                 setToggle(true);
@@ -31,7 +34,7 @@ export default function Search({page,btnCount}){
             <div className={sty.searchwrap}>
                 <input className={sty.select} 
                     type='text'
-                    placeholder="請輸入英文名稱...."
+                    placeholder="輸入神奇寶貝名稱或編號..."
                     value={text}
                     onChange={(e)=>{setText(e.target.value.trim())}}
                 />
@@ -41,7 +44,7 @@ export default function Search({page,btnCount}){
             </div>
             {
                 toggle ?
-                 <PagesButton page={page} btnCount={btnCount}/>
+                 <PagesButton pokemon={pokemon} btnCount={btnCount}/>
                 :<Card pokemon={filter}/> 
             }
         </>

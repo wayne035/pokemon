@@ -2,7 +2,8 @@ import React,{useState} from 'react'
 import Card from '../card/card'
 import sty from './style.module.css'
 
-export default function PagesButton({btnCount,page}){
+export default function PagesButton({btnCount,pokemon}){
+
     const [pageChange, setPageChange] = useState(1);
     const btn =[];
     for (let i = 1 ; i <= btnCount ; i++) {
@@ -19,13 +20,15 @@ export default function PagesButton({btnCount,page}){
         let count = 12  //一頁要多少隻?
         let start = (pageChange - 1) * count; //開始值
         let end = start + count; //結束值
-        let slicedPage = page.slice(start, end);
+        let slicedPage = pokemon.slice(start, end);
+        console.log(slicedPage)
         return <Card pokemon={slicedPage} />;
     }
+
     return (
         <>
             <div className={sty.btnwrap}>
-                {btn}
+                <div className={sty.page}>{btn}</div>
             </div>
                 {display()}
         </>
