@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pokemon/static/css/main.4f4c90bf.css",
+    "main.js": "/pokemon/static/js/main.26899004.js",
+    "index.html": "/pokemon/index.html",
+    "main.4f4c90bf.css.map": "/pokemon/static/css/main.4f4c90bf.css.map",
+    "main.26899004.js.map": "/pokemon/static/js/main.26899004.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f4c90bf.css",
+    "static/js/main.26899004.js"
+  ]
+}
